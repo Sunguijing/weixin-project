@@ -1,0 +1,28 @@
+<view class="mine">
+  <view class="header">
+    <view class="touxiang fl">
+      <image src="/image/s3.png"></image>
+    </view>
+    <view class="name fl">
+      <text>名称</text>
+    </view>
+    <view class="about fr">
+      <text>关于我们</text>
+    </view>
+  </view>
+  <view class="nav">
+    <navigator class="address-manage" url='/pages/address/address'>
+      <text>地址管理</text>
+    </navigator>
+  </view>
+  <view class="address_info">
+    <view><text>{{ info.name }}</text></view>
+    <view><text>{{ info.phone }}</text></view>
+    <view><text>{{ info.detail }}</text></view>
+  </view>
+  <view class="nav">
+    <navigator>
+      <text>我的订单</text>
+    </navigator>
+  </view>
+</view>

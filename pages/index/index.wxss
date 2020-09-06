@@ -1,0 +1,53 @@
+/**index.wxss**/
+swiper {
+  width: 100%;
+  height: 421.5rpx;
+}
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+.search{
+  padding: 20rpx;
+}
+.search_view{
+  border: 1px solid #ddd;
+  border-radius: 20rpx;
+  text-align: center;
+  height: 50rpx;
+  color: #aaa;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.search_view icon{margin-right: 15rpx;}
+.search_con{margin-top: 30rpx;}
+.title{width: 100%;text-align: center;color: #AB956D;}
+.con_top{width: 100%;height: 375rpx;margin-top: 20rpx;}
+.con_image1{width: 375rpx;height: 375rpx;float: left;}
+.con_image1 navigator,.con_image1 image{width: 100%;height: 100%;display:block;}
+.con_bottom{width: 100%;height: 375rpx;}
+.con_bottom navigator,navigator image{width: 100%;height: 100%;}
+.newest-box{
+    padding:0 40rpx;
+}
+.newest-box .newest-list{
+    display: inline-block;
+    width: 325rpx;
+    height: 325rpx;
+    margin:0 20rpx 20rpx 0;
+    border-radius: 10px;
+    text-align: center;
+    background: #f5f6f5;
+}
+.newest-box .newest-list:nth-child(2n){
+    margin-right: 0;
+}
+.newest-box .newest-list image{
+    width: 175rpx;
+    height: 175rpx;
+    margin: 20rpx 0 10rpx;
+}
+.newest-box .newest-list .newest-text{
+    font-size: 32rpx;
+}

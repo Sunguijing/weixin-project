@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="detail_top">
+    <image src="{{showGoodsInfo.img}}" class="detail_img"></image>
+    <navigator open-type="reLaunch" url="/pages/cart/cart?id={{showGoodsInfo.id}}&&num={{cartNum}}" class="detail_cart">
+      <image src='/image/cart2.png' class="{{showCartAnimate?'num_animate':''}}"></image>
+      <text class="goods_number {{showCartAnimate?'num_animate':''}}" wx:if="{{ showCartNum }}">{{ cartNum }}</text>
+    </navigator>
+    <view class="detail_con">
+      <text class="goods-operation-reduce" bindtap="reduceCount">-</text>
+      <text class="goods-operation-num">{{goodsNumber}}</text>
+      <text class="goods-operation-add" bindtap="addCount">+</text>
+      <text class="goods-to-cart" bindtap="addToCart">加入购物车</text>
+      <image src="/image/cart1.png"  class="goods-cart-img" bindtap="addToCart"></image>
+    </view>
+    <view>
+      <image wx:if="{{showCartAnimate}}" src="/image/cart1.png"  class="goods_to_cart {{showCartAnimate?'cart_animate':''}}" bindtap="addToCart"></image>
+    </view>
+    <view class="detail_info">
+      <view><text>有货</text></view>
+      <view><text>{{showGoodsInfo.name}}</text></view>
+      <view>￥<text>{{showGoodsInfo.price}}</text></view>
+    </view>
+  </view>
+  <view class="detail_bottom">
+    <view class="detail_bottom_list">
+      <view class="{{goodsIndex==1?'active':''}}" bindtap='selectIndex' data-index="1"><text>商品详情</text></view>
+      <view class="{{goodsIndex==2?'active':''}}" bindtap='selectIndex' data-index="2"><text>产品参数</text></view>
+      <view class="{{goodsIndex==3?'active':''}}" bindtap='selectIndex' data-index="3"><text>售后保障</text></view>
+    </view>
+    <view class="detail_bottom_con">
+      <view wx:if="{{goodsIndex==1}}">这里是商品详情</view>
+      <view wx:if="{{goodsIndex==2}}">这里是产品参数</view>
+      <view wx:if="{{goodsIndex==3}}">这里是售后保障</view>
+    </view>
+  </view>
+  
+  
+</view>

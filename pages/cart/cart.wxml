@@ -1,0 +1,51 @@
+<view class="cart">
+  <view class="cart_list" wx:for="{{cartageList}}" wx:key="{{index}}">
+    <view class="cart_icon fl">
+      <icon type='success' color='red' wx:if="{{item.selected}}" bindtap='selectBox' data-index="{{index}}"></icon>
+      <icon wx:else type='circle' bindtap='selectBox' data-index="{{index}}"></icon>
+    </view>
+    <view class="cart_img fl">
+      <navigator>
+        <image src="{{item.img}}"></image>
+      </navigator>
+    </view>
+    <view class="cart_name fl">
+      <view>
+        <text>{{item.name}}</text><text>{{item.weight}}</text>
+      </view>
+      <view class="cart_nums">
+        <text class="cart_num_reduce" bindtap='reduce' data-index="{{index}}">-</text>
+        <text class="cart_num">{{item.num}}</text>
+        <text class="cart_num_add" bindtap='add' data-index="{{index}}">+</text>
+      </view>
+    </view>
+    <view class="cart_info fr">
+        <view>
+          <text>￥</text>
+          <text>{{item.price}}</text>
+        </view>
+        <view class="cart_delete fr" bindtap='delete' data-index="{{index}}">
+          <text>x</text>
+        </view>
+      </view>
+  </view>
+
+  <view class="cart_bottom">
+    <view class="cart_selectAll fl">
+      <icon type='success_circle' color='white' wx:if="{{selectAll}}" bindtap='setSelected'></icon>
+      <icon wx:else type='circle' bindtap='setSelected'></icon>
+    </view>
+    <view class="cart_select_font fl">
+      <text>全选</text>
+    </view>
+    <view class="cart_icon3 fr">
+      <navigator>
+        <image src="/image/icon3.png"></image>
+      </navigator>
+    </view>
+    <view class="fr">
+      <text>￥</text><text>{{ selectNum }}</text>
+    </view>
+  </view>
+
+</view>

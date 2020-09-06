@@ -1,0 +1,85 @@
+.search_input{
+  position: relative;
+  margin: 20rpx 30rpx 10rpx;
+  display: flex;
+}
+input{
+    height: 60rpx;
+    /* width: 100%; */
+    /* color: #999; */
+    padding: 0 20rpx 0 54rpx;
+    background:#f8f8f8;
+    border-radius:10rpx;
+    border:2rpx solid #ddd;
+    flex: 7;
+}
+.form-box .input-placeholder{
+    color: #aaa;
+}
+.search_input icon{
+  position: absolute;
+  top:  19rpx;
+  left: 15rpx;
+}
+.search_input text{
+  flex: 1;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+}
+.search_history{margin:  0 30rpx;}
+.history_title{
+  margin: 30rpx 0;
+  font-size: 32rpx;
+}
+.history_title text{
+  padding-right:30rpx;
+  padding-bottom:10rpx;
+  color:#AB956D;
+  border-bottom:8rpx solid #AB956D;
+}
+.history_list{
+  min-height: 100rpx;
+}
+.history_list text{
+  display:inline-block;
+  font-size:28rpx;
+  padding:6rpx 20rpx;
+  border:2rpx solid #ddd;
+  color:#aaa;
+  margin:0 30rpx 20rpx 0;
+  border-radius:40rpx;
+  word-break:break-all;
+}
+.search_list{
+  margin: 0 30rpx;
+}
+.search_list view{
+  line-height:70rpx;
+  border-bottom:1px solid #eee;
+  color:#787878;
+  font-size:28rpx;
+}
+.newest-box{
+    padding:0 40rpx;
+    margin-top: 30rpx;
+}
+.newest-box .newest-list{
+    display: inline-block;
+    width: 325rpx;
+    height: 325rpx;
+    margin:0 20rpx 20rpx 0;
+    border-radius: 10px;
+    text-align: center;
+    background: #f5f6f5;
+}
+.newest-box .newest-list:nth-child(2n){
+    margin-right: 0;
+}
+.newest-box .newest-list image{
+    width: 175rpx;
+    height: 175rpx;
+    margin: 20rpx 0 10rpx;
+}
+.newest-box .newest-list .newest-text{
+    font-size: 32rpx;
+}

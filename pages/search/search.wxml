@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="search_input">
+    <input type='text' placeholder="搜索" bindinput="searchCon" value='{{inputVal}}'></input>
+    <icon type='search' size='15'></icon>
+    <text wx:if="{{ showGoodsTab }}" bindtap='cancelSearch'>取消</text>
+  </view>
+  <view class="search_list" wx:if="{{showTab}}">
+    <view wx:for="{{ showList }}" wx:key="{{index}}" bindtap='selectVal' data-value="{{item}}"><text>{{item}}</text></view>
+  </view>
+  <view class="newest-box" wx:if="{{ showGoodsTab }}">
+    <view class="newest-list" wx:for="{{goodsList}}" wx:key="{{index}}">
+        <navigator url="/pages/details/details">
+          <image src='{{item.img}}'></image>
+          <view class="newest-text"><text>{{ item.name }}</text><text>{{item.weight}}</text></view>
+          <view class="newest-text">￥<text>{{ item.price }}</text></view>
+        </navigator>
+    </view>
+  </view>
+  <view class='search_bottom' wx:if="{{!showGoodsTab}}">
+      <view class="search_history">
+        <view class="history_title">
+          <text>搜索记录</text>
+        </view>
+        <view class="history_list">
+          <text wx:for="{{ historyList }}" wx:key="{{index}}" bindtap='selectVal' data-value="{{item}}">{{ item }}</text>
+        </view>
+      </view>
+      <view class="search_history">
+        <view class="history_title">
+          <text>热点推荐</text>
+        </view>
+        <view class="history_list">
+          <text wx:for="{{ recommendList }}" wx:key="{{index}}" bindtap='selectVal' data-value="{{item}}">{{ item }}</text>
+        </view>
+      </view>
+  </view>
+</view>

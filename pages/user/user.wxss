@@ -1,0 +1,47 @@
+.mine{font-size: 30rpx;}
+.header{
+  width: 100%;
+  height: 140rpx;
+  background: #AB956D;
+  padding-top: 1px;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 140rpx;
+}
+.touxiang{
+  width: 80rpx;
+  height: 80rpx;
+  background: #FFB6C1;
+  border-radius: 50%;
+  margin: 30rpx 0 0 20rpx;
+  overflow: hidden;
+}
+.touxiang image{width: 80rpx;height: 80rpx;}
+.name{margin-left: 30rpx;}
+.about{margin-right: 30rpx;}
+.nav{width: 100%;height: 90rpx;line-height: 90rpx;text-align: center;border-bottom:1rpx solid #e9e9e9;position: relative;}
+.address-manage::after{
+    position: absolute;
+    right: 30rpx;
+    top: 34rpx;
+    content: '';
+    width: 16rpx;
+    height: 16rpx;
+    border-top: 4rpx solid #7f7f7f;
+    border-right: 4rpx solid #7f7f7f;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.address_info{
+  padding: 0 0 0 20rpx;
+  border-bottom:20rpx solid #ededed;
+}
+.address_info view{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:1rpx solid #e9e9e9;
+  padding-left: 16rpx;
+}
+.address_info view:nth-child(3){
+  border-bottom:0rpx solid #e9e9e9;
+}
